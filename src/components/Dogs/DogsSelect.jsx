@@ -41,7 +41,8 @@ const DogsSelect = ( { updateDogImage }) => {
 
           { breeds.map(breed => (
           <option value={breed.id} key={breed.id} style={{background:'whitesmoke'}}  > 
-              {breed.name} 
+             {breed.name} 
+           
             </option>
           ))}
 

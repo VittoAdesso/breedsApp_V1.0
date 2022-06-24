@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import  './styles.scss'; 
-import { Link } from 'react-router-dom';
+import NavBar from './../NavBar/NavBar';
+// import { Link } from 'react-router-dom';
 
 const PruebaApi = () => {
 
@@ -20,9 +21,7 @@ const PruebaApi = () => {
 
     <>
 
-      <Link to="/">
-          Home
-      </Link>
+      <NavBar></NavBar>
 
 
       <div className='listImages'>
@@ -32,7 +31,10 @@ const PruebaApi = () => {
         <ul> 
             { image.map( (picture) => { return (
             
-              <li key={picture.id}> < img  className="breeds-img" src={ picture.url } alt='hola' /> </li>
+              <li key={picture.id}>
+
+               < img  className="breeds-img" src={ picture.url } alt='hola' /> 
+               </li>
             )
           })} 
         </ul>

@@ -6,7 +6,7 @@ const CarDogs = ( { dog }) => {
         src={ dog.image}
         alt="dog"
       />
-      <p>
+      <p style={{ color: "whitesmoke" }}>
       {dog.breed.name}
       </p>
     </div>

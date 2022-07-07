@@ -2,12 +2,13 @@
 
 Connected to apiDog and used calls to paint MAGIC.
 
-Hope enjoy the breeds.
+Hope enjoy the breeds 😍
 
 --- 
 
-## 🏗️🚧🏗️ Still under construction 🏗️🚧🏗️
+## Application preview 📱
 
+<img src="./src/assets/pageListshot.png" with=100>
 
 --- 
 
@@ -17,6 +18,8 @@ In the project directory, you can run:
 
 If you clone it! Don´t forget before start the project to 👀:
 ### `npm i`
+
+## To run & start 👨‍💻
 ### `npm start`
 
 ---

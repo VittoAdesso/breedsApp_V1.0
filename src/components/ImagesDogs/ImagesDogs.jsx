@@ -3,36 +3,30 @@ import  './styles.scss';
 import NavBar from './../NavBar/NavBar';
 
 const PruebaApi = () => {
-
 const [image , setImage ] = useState([]); 
-    
+
 useEffect(() => {
-      // url que me indica la api, que me dará tooodas la imagenes, pero VITTORIO, mira luego de search, lñe pones ?limit=# que yo quiera, para me pinte tanrto como quiera 
         fetch('https://api.thedogapi.com/v1/images/search?limit=20')
-            .then(res => res.json())
-            .then((imagenes) =>{
-            setImage(imagenes);
-            })
+          .then(res => res.json())
+          .then((imagenes) =>{
+          setImage(imagenes);
+          })
     }, [])
 
-return (
-  
-  <>
-    <NavBar></NavBar>
-      <div className='listImages'>
-      {/* siempre poner la lista de imagenes fuera, y el map, me va a crear listado de imagenes, tanto como le pida */}
-      {/* entra en mi array de vueltas picture.id = y me pinta una imagen por ByteLengthQueuingStrategy, hasta llegar al limiot que le puse arriba  */}
-        <ul> 
-        { image.map( (picture) => { return (
-        
-          < img src={ picture.url } alt='hola' /> 
-         
-        )
-        })} 
-        </ul>
-      </div>
-  </>
-)
+  return (
+    <>
+      <NavBar></NavBar>
+        <div className='listImages'>
+          <ul> 
+            { image.map( (picture) => { return (
+              < img src={ picture.url } 
+              alt='hola' /> 
+            )
+            })} 
+          </ul>
+        </div>
+    </>
+  )
 }
 
 export default PruebaApi; 

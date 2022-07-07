@@ -22,9 +22,6 @@ const DogsSelect = ( { updateDogImage }) => {
       <select 
       onChange={(e)=> updateDogImage(e.target.value) }>
 
-          {/* mapeo el array de objetos, que quiero que me devuelva resultados por cada vuelta  */}
-          {/* recuerda que estoy mapeando el valor de breeds, y cuando entra en el array de objetos, siempre llamo breeds. su isElementOfType. Ojo! Recuerda ponerl la key, que será lo que le diferenciará del resto de selecciones   */}
-
       { breeds.map(breed => (
       <option
       value={breed.id} 

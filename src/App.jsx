@@ -1,6 +1,6 @@
 import React, { useState, useEffect} from 'react';
 import { Route, Routes } from 'react-router-dom';
-import NavBar from './components/NavBar/NavBar';
+// import NavBar from './components/NavBar/NavBar';
 
 import DogsSelect from './components/Dogs/DogsSelect';
 import CarDogs from './components/CarDogs/CarDogs';
@@ -8,6 +8,7 @@ import getDogImages from './helper/getDogImages';
 import ImagesDogs from './components/ImagesDogs/ImagesDogs';
 
 import negro2 from '../src/components/images/AQUILES2.jpeg'; // gives image path, así llamo mi imagen 
+import Home from './components/Home/Home';
 
 
 // 2 creamos una nueva constante para usarla de inicio de estado
@@ -42,7 +43,7 @@ function App() {
 
       <Routes>
 
-        <Route path="/" element={  <NavBar /> }/> 
+        <Route path="/" element={  <Home /> }/> 
         <Route path="/select" element={ 
           <div className="app">
           <DogsSelect updateDogImage={ updateDogImage }/>

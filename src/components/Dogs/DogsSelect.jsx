@@ -3,25 +3,15 @@ import getBreeds from '../../helper/getBreeds';
 
 import NavBar from './../NavBar/NavBar';
 
-//1 / prop function
 const DogsSelect = ( { updateDogImage }) => {
 
-  //created state
   const [breeds , setBreeds] = useState([]); 
-
-
-  //3 created 
   useEffect(()=> {
-    // included function that i created in step 2 
   updateBreeds(); 
   }, []); 
 
-
-//2 action and function
   const updateBreeds = () => {
-    // llamo a getbreds mi async await
     getBreeds()
-    // le paso por argumento nuevas razas  y que me lo cargue en esl estado setBreeds.
     .then((newBreeds) => {
       setBreeds(newBreeds); 
     })
@@ -29,9 +19,6 @@ const DogsSelect = ( { updateDogImage }) => {
   return (      
     <>
     <NavBar></NavBar>
-        
-          
-        {/* // 4 pass into props to select name with picture */}
       <select 
       onChange={(e)=> updateDogImage(e.target.value) }>
 
